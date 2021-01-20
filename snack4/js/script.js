@@ -7,27 +7,38 @@
 const bici = [
   {
     nome: 'bici1',
-    peso: 10
+    peso: 1
   },
 
   {
     nome: 'bici2',
-    peso: 6
+    peso: 20
   },
 
   {
     nome: 'bici3',
     peso: 15
-  },
-
-  {
-    nome: 'bici4',
-    peso: 2
   }
 ];
 
 // uso destructuring per determinare quale pesa meno
 
+const [primaBici,secondaBici,terzaBici] = bici;
+
+//uso let perchè la bici da pesare cambierà
+let biciDaPesare = primaBici.peso;
+
+if (secondaBici.peso < biciDaPesare) {
+  biciDaPesare = secondaBici;
+}
+
+else if (terzaBici.peso < biciDaPesare) {
+  biciDaPesare = terzaBici;
+}
+
+
+//stampo la bici che pesa meno
+console.log(`La bici che pesa meno è: ${biciDaPesare.nome}`);
 
 
 

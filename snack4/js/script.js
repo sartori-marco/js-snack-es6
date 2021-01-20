@@ -25,6 +25,7 @@ const bici = [
 
 const [primaBici, secondaBici, terzaBici] = bici;
 
+
 //uso let perchè la bici da pesare cambierà
 let biciDaPesare = primaBici.peso;
 
@@ -36,7 +37,7 @@ else if (terzaBici.peso < biciDaPesare) {
   biciDaPesare = terzaBici;
 }
 
-// console.log( 'La bici che pesa di meno è: ' + biciDaPesare);
+console.log(biciDaPesare.nome);
 
 
 //stampo la bici che pesa meno
